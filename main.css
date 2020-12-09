@@ -14,7 +14,7 @@
     --spacer-tiny: 0.1rem;
     --spacer-sm: 0.7rem;
     --spacer-med: 1rem;
-    --spacer-lg: 1.2rem;
+    --spacer-lg: 2.5rem;
 
     --font-size-xs: 12px;
     --font-size-sm: 16px;
@@ -24,6 +24,32 @@
     --font-title: "DM Serif Text", serif;
 }
 
+@media all and (min-width: 500px){
+    :root{
+        --font-size-xs: 14px;
+        --font-size-sm: 18px;
+        --spacer-sm: 0.8rem;
+        --spacer-med: 1.1rem;
+    }
+    
+}
+
+@media all and (min-width: 700px){
+    :root{
+        --font-size-xs: 16px;
+        --font-size-sm: 20px;
+        --spacer-sm: 1rem;
+        --spacer-med: 1.2rem;
+    }
+    
+}
+
+@keyframes cir{
+ 0% {top: 0}
+ 50%{top: 200px}
+ 100%{top: 400px}
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -31,7 +57,8 @@
 }
 
 img{
-    height: 70vh;
+    width: 100%;
+    max-width: 300px;
 }
 
 main{
@@ -50,10 +77,10 @@ header{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
+    height: 90vh;
     background-color: var(--colors-accent);
     color: var(--colors-white);
-    padding: var(--spacer-sm);
+    padding: var(--spacer-lg) var(--spacer-sm);
 }
 
 h1{
@@ -72,11 +99,10 @@ h1 span{
     align-items: center;
 }
 
-.header-name{
-    position: relative;
-    animation-name: name;
-    animation-duration: 1.3s;
+h1 span:last-of-type{
+    text-align: right;
 }
+
 
 .header-desc{
     position: relative;
@@ -106,6 +132,10 @@ p{
     font-size: var(--font-size-sm);
 }
 
+article p{
+    font-size: var(--font-size-xs);
+}
+
 button{
     cursor: pointer;
     outline: 0;
@@ -130,23 +160,27 @@ section{
     display: flex;
     flex-direction: column;
     width: inherit;
-    padding: var(--spacer-lg);
+    padding: 0 var(--spacer-lg);
     justify-content: flex-start;
     height: inherit;
     color: var(--colors-black);
 }
 article{
-    padding: var(--spacer-med);
+    padding: var(--spacer-med) 0;
     width: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 h3{
-    padding: var(--spacer-sm);
+    padding: var(--spacer-sm) 0;
 }
+
+/* h2{
+    font-size: var(--font-size-med);
+} */
 
 .link-wrapper{
     width: inherit; 
@@ -157,9 +191,12 @@ h3{
 
 .link-wrapper a{
     border: 2px solid var(--colors-white);
-    padding: var(--spacer-sm);
+    padding: var(--spacer-sm) 0;
     width: 120px;
-    text-align: center;
+}
+
+.link-wrapper a:last-of-type{
+    text-align: right;
 }
 
 .link-wrapper a:focus,
@@ -177,6 +214,12 @@ h3{
 .svg{
     width: 120px;
     height: 100%;
+}
+
+svg circle{
+    position: relative;
+    animation-name: cir;
+    animation-duration: 1.3s;
 }
 
 @media all and (min-width: 500px){
