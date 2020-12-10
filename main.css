@@ -135,9 +135,6 @@ p{
     font-size: var(--font-size-sm);
 }
 
-article p{
-    font-size: var(--font-size-xs);
-}
 
 button a{
     outline: 0;
@@ -189,9 +186,7 @@ article{
 h3{
     padding: var(--spacer-sm) 0 0;
 }
-.subtitle{
-    font-size: var(--font-size-xs);
-}
+
 .link-wrapper{
     width: inherit; 
     display:flex;
