@@ -299,7 +299,7 @@ img{
     } 
 
     section{
-        padding: var(--spacer-lg) calc(var(--spacer-lg) * 1.5);
+        padding:0  calc(var(--spacer-lg) * 1.5)  var(--spacer-lg);
     }
     .image-wrapper{
         max-width: 900px;
