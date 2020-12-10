@@ -1,45 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap');
 
 
-@keyframes name {
-    0% {
-        left: -500px;
-    }
-    100%{
-        left: 0;
-    }
-}
-
-@keyframes desc{
-    0% {
-        right: -500px;
-    }
-    
-    100%{
-        right: 0;
-    }
-}
-
-
-
-
 :root{
-    --colors-accent: #E1F5FE;
-    --colors-muted: #616161;
-    --colors-black: #006064;
-    --colors-white: #f5f5f5;
+    --colors-triad-one: #fdd835;
+    --colors-triad-one-dark: #f9a825;
+    --colors-triad-two: #5afd35;
+    --colors-triad-two-dark: #00bd00;
+    --colors-triad-three: #35fdd8;
+    --colors-triad-three-dark: #00d49b;
+    --colors-black: #000;
+    --colors-white: #fff;
 
     --spacer-tiny: 0.1rem;
     --spacer-sm: 0.7rem;
     --spacer-med: 1rem;
-    --spacer-lg: 1.2rem;
+    --spacer-lg: 2.5rem;
 
-    --font-size-sm: 14px;
-    --font-size-lg: 26px;
-    --font-size-title: 60px;
+    --font-size-xs: 12px;
+    --font-size-sm: 16px;
+    --font-size-lg: 36px;
 
     --font: "Montserrat", sans-serif;
     --font-title: "DM Serif Text", serif;
+}
+
+@media all and (min-width: 500px){
+    :root{
+        --font-size-xs: 14px;
+        --font-size-sm: 18px;
+        --spacer-sm: 0.8rem;
+        --spacer-med: 1.1rem;
+    }
+    
+}
+
+@media all and (min-width: 700px){
+    :root{
+        --font-size-xs: 16px;
+        --font-size-sm: 20px;
+        --spacer-sm: 1rem;
+        --spacer-med: 1.2rem;
+    }
+    
+}
+
+@keyframes cir{
+ 0% {top: 0}
+ 50%{top: 200px}
+ 100%{top: 400px}
 }
 
 *{
@@ -49,8 +57,8 @@
 }
 
 img{
-   
-    max-height: 60vh;
+    width: 100%;
+    max-width: 300px;
 }
 
 main{
@@ -67,21 +75,19 @@ main{
 header{
     width: inherit;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 90vh;
     background-color: var(--colors-accent);
     color: var(--colors-white);
-    padding: var(--spacer-sm);
+    padding: var(--spacer-lg) var(--spacer-sm);
 }
 
 h1{
     font-size: var(--font-size-title);
+    width: 100%;
     display: flex;
-    height: inherit;
-    flex-direction: column;
-    justify-content: space-between;
+    height: 110px;
     color: var(--colors-black);
     letter-spacing: var(--spacer-tiny);
 }
@@ -93,11 +99,10 @@ h1 span{
     align-items: center;
 }
 
-.header-name{
-    position: relative;
-    animation-name: name;
-    animation-duration: 1.3s;
+h1 span:last-of-type{
+    text-align: right;
 }
+
 
 .header-desc{
     position: relative;
@@ -130,14 +135,18 @@ p{
     font-size: var(--font-size-sm);
 }
 
+article p{
+    font-size: var(--font-size-xs);
+}
+
 button{
     cursor: pointer;
     outline: 0;
     width: 90px;
     height: 40px;
-    background-color: var(--colors-accent);
-    color: var(--colors-white);
-    border: 2px solid var(--colors-accent);
+    background-color: var(--colors-white);
+    color: var(--colors-triad-two-dark);
+    border: 2px solid var(--colors-triad-two-dark);
     margin: var(--spacer-sm) 0;
     padding: 0;
 
@@ -145,32 +154,36 @@ button{
 }
 
 button:focus{
-    background-color: var(--colors-light);
-    color: var(--colors-accent);
-    border: 2px solid var(--colors-accent);
+    background-color: var(--colors-white);
+    color: var(--colors-triad-two);
+    border: 2px solid var(--colors-triad-two-dark);
 }
 
 section{
     display: flex;
     flex-direction: column;
     width: inherit;
-    padding: var(--spacer-lg);
+    padding: 0 var(--spacer-lg);
     justify-content: flex-start;
     height: inherit;
     color: var(--colors-black);
 }
 article{
-    padding: var(--spacer-med);
+    padding: var(--spacer-med) 0;
     width: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 h3{
-    padding: var(--spacer-sm);
+    padding: var(--spacer-sm) 0;
 }
+
+/* h2{
+    font-size: var(--font-size-med);
+} */
 
 .link-wrapper{
     width: inherit; 
@@ -180,7 +193,36 @@ h3{
 }
 
 .link-wrapper a{
-    padding: var(--spacer-sm);
+    border: 2px solid var(--colors-white);
+    padding: var(--spacer-sm) 0;
+    width: 120px;
+}
+
+.link-wrapper a:last-of-type{
+    text-align: right;
+}
+
+.link-wrapper a:focus,
+.link-wrapper a:hover{
+   border: 2px solid var(--colors-triad-three);
+   
+}
+
+.link-wrapper a:first-of-type:focus,
+.link-wrapper a:first-of-type:hover{
+   border: 2px solid var(--colors-triad-two);
+   
+}
+
+.svg{
+    width: 120px;
+    height: 100%;
+}
+
+svg circle{
+    position: relative;
+    animation-name: cir;
+    animation-duration: 1.3s;
 }
 
 .contact-link-wrapper{
