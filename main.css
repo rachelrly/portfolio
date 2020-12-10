@@ -18,7 +18,7 @@
 
     --font-size-xs: 12px;
     --font-size-sm: 16px;
-    --font-size-lg: 36px;
+    --font-size-lg: 30px;
 
     --font: "Montserrat", sans-serif;
     --font-title: "DM Serif Text", serif;
@@ -68,23 +68,24 @@ main{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
+overflow-x: hidden;
     font-family: var(--font);
 }
 
 header{
-    width: inherit;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 90vh;
-    background-color: var(--colors-accent);
+    height: 100vh;
+    background-image: url(/images/background.png);
+    background-size: cover;
     color: var(--colors-white);
     padding: var(--spacer-lg) var(--spacer-sm);
 }
 
 h1{
-    font-size: var(--font-size-title);
+    
     width: 100%;
     display: flex;
     height: 110px;
@@ -93,6 +94,7 @@ h1{
 }
 
 h1 span{
+    font-size: var(--font-size-title);
     flex: 1;
     display: flex;
     justify-content: center;
@@ -231,6 +233,7 @@ svg circle{
     justify-content: space-between;
     padding: var(--spacer-sm);
 }
+
 
 @media all and (min-width: 500px){
     header{
