@@ -137,26 +137,31 @@ p{
 }
 
 
-button a{
-    outline: 0;
-}
 
-button{
+
+button,
+.button{
     cursor: pointer;
     outline: 0;
-    width: 90px;
+    width: 100px;
     height: 40px;
     background-color: var(--colors-white);
     color: var(--colors-black);
     border: 2px solid var(--colors-black);
     margin: var(--spacer-sm) 0;
     padding: 0;
-
+    outline: 0;
     border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-xs);
 }
 
 button:focus,
-button:hover{
+.button:focus,
+button:hover,
+.button:hover{
     background-color: var(--colors-white);
     color: var(--colors-triad-three);
     border: 2px solid var(--colors-triad-three);
@@ -221,7 +226,8 @@ img{
     padding: var(--spacer-sm) 0;
 }
 
-.about-wrapper button{
+.about-wrapper button,
+.about-wrapper .button{
     align-self: center;
 }
 
