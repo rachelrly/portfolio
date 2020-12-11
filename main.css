@@ -101,6 +101,7 @@ h2, h3{
 }
 
 h2{
+    padding-top: var(--spacer-lg);
     font-size: calc(var(--font-size-lg) * 1.2);
 }
 
@@ -165,7 +166,7 @@ section{
     display: flex;
     flex-direction: column;
     width: inherit;
-    padding: 0 var(--spacer-lg) var(--spacer-lg);
+    padding: var(--spacer-lg);
     justify-content: flex-start;
     height: inherit;
     color: var(--colors-black);
@@ -211,10 +212,12 @@ img{
 }
 
 .contact-link-wrapper{
+    align-self: center;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
+    width: inherit;
+    max-width: 900px;
+    justify-content: space-evenly;
     padding: var(--spacer-sm) 0;
 }
 
