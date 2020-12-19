@@ -8,8 +8,13 @@
     --colors-triad-two-dark: #00bd00;
     --colors-triad-three: #35fdd8;
     --colors-triad-three-dark: #00d49b;
+    --colors-accent-light: #7986CB;
     --colors-black: #000;
     --colors-white: #fff;
+
+    --header-bg: #1A237E;
+    --header-text: #FCE4EC;
+
 
     --spacer-tiny: 0.1rem;
     --spacer-sm: 0.7rem;
@@ -40,6 +45,8 @@
 img{
     width: 100%;
     max-width: 300px;
+    border-radius: 3px;
+    margin: var(--spacer-sm) 0;
 }
 
 article div{
@@ -58,20 +65,61 @@ main{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-overflow-x: hidden;
+    overflow-x: hidden;
     font-family: var(--font);
 }
 
 header{
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: 100vh;
-    background-image: url(/images/background.png);
-    background-size: cover;
+    background-color: var(--header-bg);
     color: var(--colors-white);
-    padding: var(--spacer-med) var(--spacer-sm);
+}
+
+.header-scroll{
+    padding-bottom: var(--spacer-sm);
+    color: var(--colors-accent-light);
+}
+.svg-wrapper{
+    width: inherit;
+    height: 100vh;
+    display: flex;
+    padding: 0 var(--spacer-sm);
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-wrapper svg{
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 400px;
+}
+
+.svg-wrapper svg text{
+    font-size: 9.2px;
+    fill: var(--header-text);
+}
+
+@media all and (min-width: 350px){
+    .svg-wrapper svg text{
+        font-size: 10.5px;
+    }
+}
+
+@media all and (min-width: 400px){
+    .svg-wrapper svg text{
+        font-size: 12px;
+    }
+
+}
+
+.rachel-subtitle{
+    color: var(--colors-accent-light);
 }
 
 h1{
@@ -118,7 +166,7 @@ footer{
     align-items: center;
     width: inherit;
     height: 50px;
-    background-color: var(--colors-triad-three);
+    background-color: var(--colors-accent-light);
     color: var(--colors-black);
     padding: var(--spacer-sm);
 }
@@ -146,9 +194,9 @@ button,
     width: 100px;
     height: 40px;
     background-color: var(--colors-white);
-    color: var(--colors-black);
-    border: 2px solid var(--colors-black);
-    margin: var(--spacer-sm) 0;
+    color: var(--header-bg);
+    border: 2px solid var(--header-bg);
+    margin: var(--spacer-sm) 0 0;
     padding: 0;
     outline: 0;
     border-radius: 3px;
@@ -162,26 +210,27 @@ button:focus,
 .button:focus,
 button:hover,
 .button:hover{
-    background-color: var(--colors-white);
-    color: var(--colors-triad-three);
-    border: 2px solid var(--colors-triad-three);
+    background-color: var(--header-bg);
+    color: var(--colors-accent-light);
+    font-weight: bold;
+    border: 2px solid var(--header-bg);
 }
 
 section{
     display: flex;
     flex-direction: column;
     width: inherit;
-    padding: var(--spacer-lg);
+    padding: var(--spacer-lg) var(--spacer-lg) 0 var(--spacer-lg);
     justify-content: flex-start;
     height: inherit;
     color: var(--colors-black);
 }
-section:first-of-type{
-    padding-top: var(--spacer-lg);
+section:last-of-type{
+    padding-bottom: var(--spacer-lg);
 }
 
 article{
-    padding: var(--spacer-med) 0 0;
+    padding: 0 0 var(--spacer-med);
     width: inherit;
     display: flex;
     flex-direction: column;
@@ -211,10 +260,7 @@ h3{
     padding: 0;
 }
 
-img{
-    border-radius: 3px;
-    padding: var(--spacer-sm);
-}
+
 
 .contact-link-wrapper{
     align-self: center;
@@ -222,8 +268,8 @@ img{
     flex-wrap: wrap;
     width: inherit;
     max-width: 900px;
-    justify-content: space-evenly;
-    padding: var(--spacer-sm) 0;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .about-wrapper button,
@@ -231,8 +277,8 @@ img{
     align-self: center;
 }
 
-.about-p-wrapper{
-    padding: var(--spacer-sm) 0;
+.about-p-wrapper p:last-of-type{
+    padding-bottom: 0;
 }
 
 .about-flex-wrapper{
@@ -243,12 +289,7 @@ img{
     
 }
 
-.rachel-img{
-    padding: 0 0 var(--spacer-sm) 0;
-    border-radius: 3px;
-    align-self: center;
 
-}
 
 .icon{
     height: 45px;
@@ -260,8 +301,7 @@ img{
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    max-width: 200px;
-    padding: var(--spacer-sm) 0;
+    
 }
 
 .title-icon-wrapper{
@@ -273,11 +313,15 @@ img{
 }
 
 @media all and (min-width: 500px){
-    header{
-        flex-direction: row;
-        justify-content: space-between;
+
+    .icon-wrapper{
+        max-width: 200px;
     }
 
+    .contact-link-wrapper{
+        justify-content: space-evenly;
+    }
+ 
     .icon{
         height: 50px;
         width:50px;
