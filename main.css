@@ -30,12 +30,6 @@
 }
 
 
-@keyframes cir{
- 0% {top: 0}
- 50%{top: 200px}
- 100%{top: 400px}
-}
-
 *{
     padding: 0;
     margin: 0;
@@ -105,19 +99,6 @@ header{
     fill: var(--header-text);
 }
 
-@media all and (min-width: 350px){
-    .svg-wrapper svg text{
-        font-size: 10.5px;
-    }
-}
-
-@media all and (min-width: 400px){
-    .svg-wrapper svg text{
-        font-size: 12px;
-    }
-
-}
-
 .rachel-subtitle{
     color: var(--colors-accent-light);
 }
@@ -175,17 +156,16 @@ footer .icon{
     color: var(--colors-white);
     font-size: 30px;
 }
+
 a{
     text-decoration: none;
     color: inherit;
 }
+
 p{
     padding: var(--spacer-sm) 0;
     font-size: var(--font-size-sm);
 }
-
-
-
 
 button,
 .button{
@@ -224,6 +204,7 @@ section{
     justify-content: flex-start;
     height: inherit;
     color: var(--colors-black);
+    max-width: 1000px;
 }
 section:last-of-type{
     padding-bottom: var(--spacer-lg);
@@ -289,11 +270,11 @@ h3{
     
 }
 
-
-
 .icon{
     height: 45px;
     width:45px;
+    padding: 10px;
+    margin: 0;
 }
 
 .icon-wrapper{
@@ -312,7 +293,25 @@ h3{
     padding: 0;
 }
 
+
+@media all and (min-width: 350px){
+    .svg-wrapper svg text{
+        font-size: 10.5px;
+    }
+}
+
+@media all and (min-width: 400px){
+    .svg-wrapper svg text{
+        font-size: 12px;
+    }
+
+}
+
 @media all and (min-width: 500px){
+
+    .rachel-subtitle{
+        margin-top: var(--spacer-tiny);
+    }
 
     .icon-wrapper{
         max-width: 200px;
@@ -322,13 +321,8 @@ h3{
         justify-content: space-evenly;
     }
  
-    .icon{
-        height: 50px;
-        width:50px;
-    }
-
-    .icon-wrapper{
-        width: 220px;
+    h3{
+        padding: 0;
     }
     
 
@@ -357,6 +351,15 @@ h3{
 }
 
 @media all and (min-width: 650px){
+
+    .svg-wrapper svg text{
+        font-size: 14px;
+    }
+
+    .svg-wrapper svg{
+        max-width: 450px;
+    }
+
     .image-wrapper{
         justify-content: space-between;
         flex-direction: row;
@@ -365,15 +368,10 @@ h3{
     article div img{
         width: 220px;
     }
-    
 
-.about-flex-wrapper{
+    .about-flex-wrapper{
     flex-direction: row;
-}
-
-.rachel-img{
-    padding-left: var(--spacer-sm);
-}
+    }
 
 }
 
@@ -388,19 +386,21 @@ h3{
         --font-size-sm: 20px;
         --font-size-lg: 30px;
     } 
-    .icon{
-        height: 55px;
-        width:55px;
+  
+    .svg-wrapper svg text{
+        font-size: 16px;
     }
 
-    .icon-wrapper{
-        width: 250px;
+   
+
+    .svg-wrapper svg{
+        max-width: 500px;
     }
-    
 
     section{
-        padding:0  calc(var(--spacer-lg) * 1.5)  var(--spacer-lg);
+        padding:var(--spacer-lg) calc(var(--spacer-lg) * 1.5) 0 ;
     }
+
     .image-wrapper{
         max-width: 900px;
     }
