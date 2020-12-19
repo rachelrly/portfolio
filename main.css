@@ -39,8 +39,13 @@
 img{
     width: 100%;
     max-width: 300px;
-    border-radius: 3px;
+    border-radius: 2px;
     margin: var(--spacer-sm) 0;
+    
+}
+
+.image-wrapper img{
+    border: 0.5px solid #0e0e0e;
 }
 
 article div{
@@ -77,10 +82,12 @@ header{
 .header-scroll{
     padding-bottom: var(--spacer-sm);
     color: var(--colors-accent-light);
+    position: relative;
+    bottom: var(--spacer-sm);
 }
 .svg-wrapper{
     width: inherit;
-    height: 100vh;
+    height: 100%;
     display: flex;
     padding: 0 var(--spacer-sm);
     justify-content: center;
@@ -173,8 +180,8 @@ footer{
     align-items: center;
     width: inherit;
     height: 50px;
-    background-color: var(--colors-accent-light);
-    color: var(--colors-black);
+    background-color: var(--header-bg);
+    color: var(--colors-accent-light);
     padding: var(--spacer-sm);
 }
 
@@ -201,7 +208,7 @@ button,
     height: 40px;
     background-color: var(--colors-white);
     color: var(--colors-black);
-    border: 2px solid var(--colors-black);
+    border: 1.5px solid var(--colors-black);
     margin: var(--spacer-sm) 0 0;
     padding: 0;
     outline: 0;
@@ -219,7 +226,7 @@ button:hover,
     background-color: var(--header-bg);
     color: var(--colors-accent-light);
     font-weight: bold;
-    border: 2px solid var(--header-bg);
+    border: 1.5px solid var(--header-bg);
 }
 
 section{
@@ -237,7 +244,6 @@ section:last-of-type{
 }
 
 article{
-    padding: 0 0 var(--spacer-med);
     width: inherit;
     display: flex;
     flex-direction: column;
@@ -246,7 +252,7 @@ article{
 }
 
 h3{
-    padding: var(--spacer-sm) 0 0;
+    padding: var(--spacer-lg) 0 0;
 }
 
 .link-wrapper{
@@ -416,12 +422,24 @@ h3{
         font-size: 16px;
     }
 
-   
+   section:last-of-type{
+       padding-bottom: calc(var(--spacer-lg) * 1.5);
+   }
 
     .svg-wrapper svg{
         max-width: 500px;
     }
 
+    article{
+        margin-top: var(--spacer-lg);
+    }
+    article:first-of-type{
+        margin-top: var(--spacer-sm);
+    }
+
+    .title-icon-wrapper{
+        margin-top: 0;
+    }
     section{
         padding:var(--spacer-lg) calc(var(--spacer-lg) * 1.5) 0 ;
     }
