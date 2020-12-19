@@ -99,6 +99,32 @@ header{
     fill: var(--header-text);
 }
 
+svg text .color-one{
+    fill: #60bfde;
+}
+svg text .color-three{
+    fill: #ddbee4;
+}
+svg text .color-two{
+    fill: #EEFF41;
+}
+
+svg text .color-four{
+    fill: #F06292;
+}
+svg text .color-five{
+    fill:#9fa8da;
+}
+
+svg text .color-six{
+    fill: #00E5FF
+    ;
+}
+
+svg text .color-seven{
+    fill: #cfe059;
+}
+
 .rachel-subtitle{
     color: var(--colors-accent-light);
 }
