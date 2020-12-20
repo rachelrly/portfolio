@@ -68,7 +68,8 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     overflow: hidden;
     background-color: var(--header-bg);
     color: var(--colors-white);
@@ -77,8 +78,7 @@ header{
 .header-scroll{
     padding-bottom: var(--spacer-sm);
     color: var(--colors-accent-light);
-    position: relative;
-    bottom: var(--spacer-sm);
+    
 }
 .svg-wrapper{
     width: inherit;
