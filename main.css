@@ -2,12 +2,6 @@
 
 
 :root{
-    --colors-triad-one: #fdd835;
-    --colors-triad-one-dark: #f9a825;
-    --colors-triad-two: #5afd35;
-    --colors-triad-two-dark: #00bd00;
-    --colors-triad-three: #35fdd8;
-    --colors-triad-three-dark: #00d49b;
     --colors-accent-light: #7986CB;
     --colors-black: #000;
     --colors-white: #fff;
@@ -97,7 +91,7 @@ header{
 .svg-wrapper svg{
     width: 100%;
     height: 100%;
-    max-height: 500px;
+    max-height: 540px;
     max-width: 400px;
 }
 
@@ -133,7 +127,8 @@ svg text .color-seven{
 }
 
 .rachel-subtitle{
-    color: var(--colors-accent-light);
+    color: var(--header-bg);
+    padding-bottom: var(--spacer-sm);
 }
 
 h1{
@@ -391,6 +386,13 @@ h3{
         max-width: 450px;
     }
 
+    .about-flex-wrapper{
+    flex-direction: row;
+    }
+
+}
+
+@media all and (min-width: 700px){
     .image-wrapper{
         justify-content: space-between;
         flex-direction: row;
@@ -399,11 +401,6 @@ h3{
     article div img{
         width: 220px;
     }
-
-    .about-flex-wrapper{
-    flex-direction: row;
-    }
-
 }
 
 @media all and (min-width: 800px){
@@ -449,3 +446,22 @@ h3{
     }
  
  }
+ @keyframes animated-text{
+    from{width: 0;}
+    to{width: 400px;}
+  }
+ svg text{
+    animation: animated-text 2s steps(30,end) 1s 1 normal both;
+  }
+  
+  @keyframes showThird {
+    66.0001%, 99.999% {
+      opacity: 1;
+    }
+    0%, 66%, 100% { opacity: 0; }
+  }
+  
+  /* .line1{
+    animation: showThird 12s infinite;
+  } */
+
