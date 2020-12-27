@@ -104,7 +104,7 @@ header{
 }
 
 .svg-wrapper svg text{
-    font-size: var(--font-size-sm);
+    font-size: calc(var(--font-size-sm) * 0.8 );
     fill: var(--header-text);
 }
 
