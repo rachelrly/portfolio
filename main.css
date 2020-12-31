@@ -95,6 +95,8 @@ header{
     max-height: 540px;
     max-width: 400px;
     padding: 0 var(--spacer-sm);
+    display: flex;
+    justify-content: center;
 }
 
 .svg-wrapper svg{
