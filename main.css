@@ -334,6 +334,7 @@ article{
     align-items: flex-start;
     width: 100%;
     margin-top: var(--spacer-sm);
+    display: none;
 }
 
 .title-icon-wrapper{
@@ -407,6 +408,7 @@ article{
     .icon-wrapper{
         padding-left: var(--spacer-med);
         padding-bottom: 0;
+        display: flex;
     }
 
     .project-img{
