@@ -10,13 +10,13 @@
     --header-text: #FCE4EC;
 
     --spacer-tiny: 0.4rem;
-    --spacer-sm: 1rem;
+    --spacer-sm: 0.8rem;
     --spacer-med: 1.4rem;
     --spacer-lg: 1.8rem;
 
     --font-size-xs: .8rem;
-    --font-size-sm: 1rem;
-    --font-size-med: 1.6rem;
+    --font-size-sm: 0.8rem;
+    --font-size-med: 1.4rem;
     --font-size-lg: 2rem;
 
     --button-width: 7.8rem;
