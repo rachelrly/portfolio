@@ -10,13 +10,13 @@
     --header-text: #FCE4EC;
 
     --spacer-tiny: 0.4rem;
-    --spacer-sm: 0.8rem;
+    --spacer-sm: 1rem;
     --spacer-med: 1.4rem;
     --spacer-lg: 1.8rem;
 
     --font-size-xs: .8rem;
-    --font-size-sm: 0.8rem;
-    --font-size-med: 1.4rem;
+    --font-size-sm: 1rem;
+    --font-size-med: 1.6rem;
     --font-size-lg: 2rem;
 
     --button-width: 7.8rem;
@@ -53,9 +53,6 @@ article div{
 
 main{
     width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -342,6 +339,7 @@ article{
     flex-direction: column;
     width: inherit;
     max-width: inherit;
+    margin-top: var(--spacer-med);
     padding: 0;
 
    
@@ -392,6 +390,13 @@ article{
 
 @media all and (min-width: 500px){
 
+    main{
+
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    }
+
     .svg-wrapper{
         max-width: 460px;
     }
@@ -403,6 +408,7 @@ article{
     .title-icon-wrapper{
         flex-direction: row;
         align-items: center;
+        margin-top: 0;
     }
 
     .icon-wrapper{
