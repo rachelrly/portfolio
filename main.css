@@ -60,7 +60,9 @@ main{
     overflow-x: hidden;
     font-family: var(--font);
     line-height: var(--line-height);
-    background-color: #f6eef894;
+    background-color: #fefefe;
+    height: inherit;
+    overflow-y: hidden;
     
 }
 
@@ -218,6 +220,7 @@ button,
     border: 1.5px solid var(--colors-black);
     padding: 0;
     outline: 0;
+    transition: font-size .5s;
     border-radius: 3px;
     display: flex;
     justify-content: center;
@@ -229,9 +232,9 @@ button:focus,
 .button:focus,
 button:hover,
 .button:hover{
-    background-color: var(--header-bg);
-    color: var(--colors-accent-light);
-    font-weight: bold;
+    transition: font-size .5s;
+    color: var(--header-bg);
+    font-size: calc(var(--font-size-sm)) * 1.2;
     border: 1.5px solid var(--header-bg);
 }
 
@@ -259,7 +262,7 @@ article{
 .link-wrapper{
     width: inherit; 
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0;
     
@@ -330,7 +333,6 @@ article{
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    margin-top: var(--spacer-sm);
     display: none;
 }
 
@@ -390,12 +392,7 @@ article{
 
 @media all and (min-width: 500px){
 
-    main{
-
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    }
+  
 
     .svg-wrapper{
         max-width: 460px;
@@ -424,6 +421,12 @@ article{
 }
 
 @media all and (min-width: 650px){
+    main{
+
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        }
 
     .svg-wrapper svg text{
         font-size: 14px;
