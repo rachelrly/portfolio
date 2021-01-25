@@ -60,7 +60,8 @@ main{
     overflow-x: hidden;
     font-family: var(--font);
     line-height: var(--line-height);
-    background-color: #fefefe;
+    background-color: #cdd1e8;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='32' viewBox='0 0 48 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239fa8da' fill-opacity='0.32'%3E%3Cpath d='M27 32c0-3.314 2.686-6 6-6 5.523 0 10-4.477 10-10S38.523 6 33 6c-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 6.627 0 12 5.373 12 12s-5.373 12-12 12c-2.21 0-4 1.79-4 4h-2zm-6 0c0-3.314-2.686-6-6-6-5.523 0-10-4.477-10-10S9.477 6 15 6c3.314 0 6-2.686 6-6h-2c0 2.21-1.79 4-4 4C8.373 4 3 9.373 3 16s5.373 12 12 12c2.21 0 4 1.79 4 4h2z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     height: inherit;
     overflow-y: hidden;
     
@@ -77,6 +78,7 @@ header{
     min-height: 100vh;
     overflow: hidden;
     background-color: var(--header-bg);
+    z-index: 2;
     color: var(--colors-white);
 }
 
@@ -183,16 +185,30 @@ footer{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100vw;
-    height: 50px;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-x:hidden;
+    overscroll-behavior: unset;
     background-color: var(--header-bg);
     color: var(--colors-accent-light);
-    padding: var(--spacer-sm);
+    padding: 0 var(--spacer-sm);
+    
 }
 
-footer .icon{
-    color: var(--colors-white);
-    font-size: 30px;
+.footer-icon{
+    fill: var(--colors-accent-light);
+}
+footer a{
+    outline: 0;
+}
+
+a:focus .footer-icon,
+a:hover .footer-icon{
+    fill: #EEFF41;
 }
 
 footer span{
@@ -217,6 +233,7 @@ button,
     width: var(--button-width);
     height: var(--button-height);
     color: var(--colors-black);
+    background-color: #cdd1e8;
     border: 1.5px solid var(--colors-black);
     padding: 0;
     outline: 0;
@@ -248,6 +265,7 @@ section{
 }
 section:last-of-type{
     padding-bottom: var(--spacer-lg);
+    position: relative;
 }
 
 article{
@@ -262,12 +280,16 @@ article{
 .link-wrapper{
     width: inherit; 
     display:flex;
-    justify-content: space-around;
+    height: 100%;
+    justify-content: space-evenly;
     align-items: center;
     padding: 0;
-    
+    flex-wrap: wrap;
 }
 
+.link-wrapper>*{
+    margin-bottom: var(--spacer-sm);
+}
 
 .contact-wrapper p {
     padding-bottom: 0;
@@ -333,25 +355,37 @@ article{
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    display: none;
+    flex-wrap: wrap;
+    flex: 3;
+    margin-top: var(--spacer-sm);
 }
 
 .title-icon-wrapper{
     display: flex;
     flex-direction: column;
     width: inherit;
-    max-width: inherit;
     margin-top: var(--spacer-med);
     padding: 0;
 
    
 }
-
+.footer-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .scroll-snap-container{
     scroll-snap-align: start;
-    min-height: 100vh;
     padding: var(--spacer-med) calc(var(--spacer-lg) * 1.5);
 }
+/* 
+.scroll-snap-container:last-of-type{
+    min-height: calc(100vh - 50px);
+}
+
+.scroll-snap-container:first-of-type{
+    min-height: calc(100vh + 50px);
+} */
 
 .about-container{
     padding: var(--spacer-lg) calc(var(--spacer-lg) * 1.5) var(--spacer-lg);
@@ -364,7 +398,8 @@ article{
     width: inherit;
     align-self: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     flex: 4;
 }
@@ -374,8 +409,19 @@ article{
     width: auto;
     align-self: center;
     max-width: 300px;
+    max-height: 60vh;
+    margin-bottom: var(--spacer-med);
 }
 
+.about-link{
+    color: var(--header-bg);
+}
+
+.about-link:hover,
+.about-link:focus{
+    color: var(--colors-accent-light);
+    outline: 0;
+}
 
 @media all and (min-width: 350px){
     .svg-wrapper svg text{
@@ -392,19 +438,27 @@ article{
 
 @media all and (min-width: 500px){
 
-  
-
     .svg-wrapper{
         max-width: 460px;
     }
+    /* switches the padding for title and tech stack
+    .tech-type:last-of-type{
+        padding-right: var(--spacer-sm);
+    }
+    .tech-type:last-of-type{
+        padding-left: var(--spacer-sm);
+    } */
+
+
 
     .icon-wrapper{
-        max-width: 200px;
+        margin-top: 0;
     }
-    
+
     .title-icon-wrapper{
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
         margin-top: 0;
     }
 
@@ -414,9 +468,7 @@ article{
         display: flex;
     }
 
-    .project-img{
-        max-width: 400px;
-    }
+
 
 }
 
@@ -440,12 +492,27 @@ article{
     flex-direction: row;
     }
 
+    .project-img-wrapper{
+        flex-direction: row;
+    }
+
+    .project-img{
+        margin-bottom: 0;
+    }
+
 }
 
 @media all and (min-width: 700px){
+    /*flips link and image*/
     .image-wrapper{
         justify-content: space-between;
         flex-direction: row;
+    }
+
+    .link-wrapper{
+        flex-direction: column;
+        justify-content: flex-start;
+        width: calc(var(--button-width) * 1.2);
     }
 
     article div img{
@@ -505,8 +572,5 @@ article{
     }
     0%, 66%, 100% { opacity: 0; }
   }
-  
-  /* .line1{
-    animation: showThird 12s infinite;
-  } */
+
 
