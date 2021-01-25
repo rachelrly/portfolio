@@ -399,7 +399,7 @@ article{
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex: 4;
 }
@@ -473,12 +473,7 @@ article{
 }
 
 @media all and (min-width: 650px){
-    main{
-
-        height: 100vh;
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-        }
+   
 
     .svg-wrapper svg text{
         font-size: 14px;
@@ -521,6 +516,15 @@ article{
 }
 
 @media all and (min-width: 800px){
+    main{
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        }
+
+    section{
+        height: 100vh;
+    }
     
     :root{
     --spacer-sm: 1.4rem;
