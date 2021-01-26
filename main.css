@@ -3,6 +3,7 @@
 
 :root{
     --colors-accent-light: #7986CB;
+    --colors-yellow: #EEFF41;
     --colors-black: #000;
     --colors-white: #fff;
 
@@ -118,7 +119,7 @@ svg text .color-three{
     fill: #ddbee4;
 }
 svg text .color-two{
-    fill: #EEFF41;
+    fill: var(--colors-yellow);
 }
 
 svg text .color-four{
@@ -187,12 +188,6 @@ footer{
     align-items: center;
     width: 100%;
     height: 40px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    overflow-x:hidden;
-    overscroll-behavior: unset;
     background-color: var(--header-bg);
     color: var(--colors-accent-light);
     padding: 0 var(--spacer-sm);
@@ -208,7 +203,7 @@ footer a{
 
 a:focus .footer-icon,
 a:hover .footer-icon{
-    fill: #EEFF41;
+    fill: var(--colors-yellow);
 }
 
 footer span{
@@ -232,9 +227,10 @@ button,
     outline: 0;
     width: var(--button-width);
     height: var(--button-height);
-    color: var(--colors-black);
-    background-color: #cdd1e8;
-    border: 1.5px solid var(--colors-black);
+    transition: background-color color .5s;
+    background-color: var(--header-bg);
+    border: 1.5px solid var(--header-bg);
+    color: white;
     padding: 0;
     outline: 0;
     transition: font-size .5s;
@@ -249,10 +245,9 @@ button:focus,
 .button:focus,
 button:hover,
 .button:hover{
-    transition: font-size .5s;
-    color: var(--header-bg);
-    font-size: calc(var(--font-size-sm)) * 1.2;
-    border: 1.5px solid var(--header-bg);
+    color: var(--colors-black);
+    background-color: #cdd1e8;
+    border: 1.5px solid var(--colors-black);
 }
 
 section{
@@ -516,15 +511,6 @@ article{
 }
 
 @media all and (min-width: 800px){
-    main{
-        height: 100vh;
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-        }
-
-    section{
-        height: 100vh;
-    }
     
     :root{
     --spacer-sm: 1.4rem;
