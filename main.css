@@ -484,24 +484,12 @@ article{
     flex-direction: row;
     }
 
-
-}
-
-@media all and (min-width: 700px){
-    /*flips link and image*/
-    .image-wrapper{
-        justify-content: space-between;
-        flex-direction: row;
-    }
-
-    
-
     article div img{
         width: 220px;
     }
 
-    
 }
+
 
 @media all and (min-width: 800px){
     
@@ -512,6 +500,11 @@ article{
 
     --font-size-xs: 1rem;
     } 
+
+    .image-wrapper{
+        justify-content: space-between;
+        flex-direction: row;
+    }
 
     h2{
         padding-top: 0;
