@@ -101,11 +101,7 @@ header{
     justify-content: center;
 }
 
-.svg-wrapper svg{
-    width: inherit;
-    height: inherit;
-    
-}
+
 
 .svg-wrapper svg text{
     font-size: calc(var(--font-size-sm) * 0.8 );
@@ -401,6 +397,16 @@ article{
     flex: 4;
 }
 
+.img-flex-wrapper{
+    width: inherit;
+    flex: 2;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .project-img{
     height: inherit;
     width: auto;
@@ -469,6 +475,20 @@ article{
 
 }
 
+@media all and (min-width: 600px){
+    .project-img{
+        margin-right: var(--spacer-med);
+    }
+
+    .img-flex-wrapper{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    article div img{
+        width: 220px;
+    }
+}
+
 @media all and (min-width: 650px){
    
 
@@ -484,37 +504,21 @@ article{
     flex-direction: row;
     }
 
-    article div img{
-        width: 220px;
-    }
+   
+/*switch to images next to each other with margin right*/
+    
 
 }
 
 
 @media all and (min-width: 800px){
     
-    :root{
-    --spacer-sm: 1.4rem;
-    --spacer-med: 2.8rem;
-    --spacer-lg: 5.6rem;
-
-    --font-size-xs: 1rem;
-    } 
-
-    .image-wrapper{
-        justify-content: space-between;
-        flex-direction: row;
-    }
-
+    
     h2{
         padding-top: 0;
     }
   
-    .link-wrapper{
-        flex-direction: column;
-        justify-content: flex-start;
-        width: calc(var(--button-width) * 1.2);
-    }
+   
     .project-img{
         margin-bottom: 0;
     }
@@ -532,10 +536,6 @@ article{
     }
     article:first-of-type{
         margin-top: var(--spacer-sm);
-    }
-
-    .project-img-wrapper{
-        flex-direction: row;
     }
 
     .title-icon-wrapper{
@@ -562,4 +562,25 @@ article{
     0%, 66%, 100% { opacity: 0; }
   }
 
+
+  @media all and (min-width: 1000px){
+    :root{
+        --spacer-sm: 1.4rem;
+        --spacer-med: 2.8rem;
+        --spacer-lg: 5.6rem;
+    
+        --font-size-xs: 1rem;
+        } 
+    
+    .project-img-wrapper{
+        flex-direction: row;
+    }
+
+    .link-wrapper{
+        align-self: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: var(--button-width);
+    }
+  }
 
