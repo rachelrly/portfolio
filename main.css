@@ -92,13 +92,18 @@ header{
 .svg-wrapper{
     align-self: center;
     flex: 5;
-    width: 100%;
-    height: 100%;
-    max-height: 540px;
-    max-width: 400px;
+    width: 90vw;
+    height: 90vh;
     padding: 0 var(--spacer-sm);
     display: flex;
     justify-content: center;
+}
+
+.svg-wrapper svg{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+
 }
 
 
@@ -324,7 +329,7 @@ article{
     align-self: center;
 }
 
-.about-p-wrapper p:last-of-type{
+.about-flex-wrapper p:last-of-type{
     padding-bottom: 0;
 }
 
@@ -371,14 +376,10 @@ article{
     scroll-snap-align: start;
     padding: var(--spacer-med) calc(var(--spacer-lg) * 1.5);
 }
-/* 
-.scroll-snap-container:last-of-type{
-    min-height: calc(100vh - 50px);
+header.scroll-snap-container{
+    padding: var(--spacer-sm);
 }
 
-.scroll-snap-container:first-of-type{
-    min-height: calc(100vh + 50px);
-} */
 
 .about-container{
     padding: var(--spacer-lg) calc(var(--spacer-lg) * 1.5) var(--spacer-lg);
@@ -392,7 +393,7 @@ article{
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex: 4;
 }
@@ -441,9 +442,7 @@ article{
 
 @media all and (min-width: 500px){
 
-    .svg-wrapper{
-        max-width: 460px;
-    }
+    
     /* switches the padding for title and tech stack
     .tech-type:last-of-type{
         padding-right: var(--spacer-sm);
@@ -482,10 +481,6 @@ article{
 
     .img-flex-wrapper{
         flex-direction: row;
-        justify-content: space-between;
-    }
-    article div img{
-        width: 220px;
     }
 }
 
@@ -495,15 +490,6 @@ article{
     .svg-wrapper svg text{
         font-size: 14px;
     }
-
-    .svg-wrapper{
-        max-width: 80vw;
-    }
-
-    .about-flex-wrapper{
-    flex-direction: row;
-    }
-
    
 /*switch to images next to each other with margin right*/
     
@@ -512,30 +498,13 @@ article{
 
 
 @media all and (min-width: 800px){
-    
-    
+
     h2{
         padding-top: 0;
     }
   
-   
-    .project-img{
-        margin-bottom: 0;
-    }
-
     .svg-wrapper svg text{
         font-size: 16px;
-    }
-
-    .svg-wrapper svg{
-        max-width: 500px;
-    }
-
-    article{
-        margin-top: var(--spacer-lg);
-    }
-    article:first-of-type{
-        margin-top: var(--spacer-sm);
     }
 
     .title-icon-wrapper{
@@ -545,6 +514,24 @@ article{
     .image-wrapper{
         max-width: 900px;
     }
+
+     
+    .project-img-wrapper{
+        flex-direction: row;
+    }
+
+    .project-img-wrapper:nth-of-type(odd){
+        flex-direction: row-reverse;
+    }
+
+    .link-wrapper{
+        align-self: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: var(--button-width);
+    }
+
+    
  
  }
  @keyframes animated-text{
@@ -571,16 +558,6 @@ article{
     
         --font-size-xs: 1rem;
         } 
-    
-    .project-img-wrapper{
-        flex-direction: row;
-    }
-
-    .link-wrapper{
-        align-self: flex-start;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: var(--button-width);
-    }
+   
   }
 
