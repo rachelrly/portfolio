@@ -92,7 +92,8 @@ header{
 .svg-wrapper{
     align-self: center;
     flex: 5;
-    width: 90vw;
+    width: 100vw;
+    overflow-x:hidden;
     height: 90vh;
     padding: 0 var(--spacer-sm);
     display: flex;
