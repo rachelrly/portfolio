@@ -362,7 +362,6 @@ article{
 
 .title-icon-wrapper{
     display: flex;
-    flex-direction: column;
     width: inherit;
     margin-top: var(--spacer-med);
     padding: 0;
