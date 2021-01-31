@@ -1,4 +1,4 @@
-# Rachel Reilly | JavaScript Developer
+# Rachel Reilly | Software Engineer
 
 This is the repository for Rachel Reilly's portfolio site.
 
