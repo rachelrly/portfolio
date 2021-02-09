@@ -11,7 +11,7 @@ A recipe app that scales up and down ingredients.
 [View project](https://sliced.rachanastasia.vercel.app/) ◇ 
 [View client repository](https://github.com/Rachanastasia/sliced-client) ◇ 
 [View server repository](https://github.com/Rachanastasia/sliced-API) ◇ 
-[View Medium article]()
+[View Medium article](https://rachanastasia.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b)
 
 ### Spaced Repetition
 
@@ -41,7 +41,8 @@ A full stack GraphQL project that allows users to filter books by author, rating
 ### Loan Calculator
 
 [View project](https://loan-calculator-two.vercel.app/) ◇ 
-[View repository](https://github.com/Rachanastasia/loan-calculator)
+[View repository](https://github.com/Rachanastasia/loan-calculator) ◇ 
+[View Medium article](https://rachanastasia.medium.com/usestate-vs-usereducer-9bbfca768f51)
 
 
 
