@@ -147,11 +147,9 @@ svg text .color-seven{
     flex: 4;
 }
 
-h1{
-    
+h1{  
     width: 100%;
     display: flex;
-    font-size: var(--font-size-lg);
     color: var(--colors-black);
 }
 
@@ -166,10 +164,6 @@ h1 span{
 
 h1 span:last-of-type{
     text-align: right;
-}
-
-h3{
-    font-size: var(--font-size-med);
 }
 
 h2{
@@ -362,6 +356,7 @@ article{
 
 .title-icon-wrapper{
     display: flex;
+    flex-direction: column;
     width: inherit;
     margin-top: var(--spacer-med);
     padding: 0;
@@ -442,18 +437,9 @@ header.scroll-snap-container{
 }
 
 @media all and (min-width: 500px){
-
-    
-    /* switches the padding for title and tech stack
-    .tech-type:last-of-type{
-        padding-right: var(--spacer-sm);
+    h1{
+        font-size: var(--font-size-lg);
     }
-    .tech-type:last-of-type{
-        padding-left: var(--spacer-sm);
-    } */
-
-
-
     .icon-wrapper{
         margin-top: 0;
     }
@@ -475,7 +461,8 @@ header.scroll-snap-container{
 
 }
 
-@media all and (min-width: 600px){
+
+@media all and (min-width: 650px){
     .project-img{
         margin-right: var(--spacer-med);
     }
@@ -483,14 +470,15 @@ header.scroll-snap-container{
     .img-flex-wrapper{
         flex-direction: row;
     }
-}
-
-@media all and (min-width: 650px){
-   
 
     .svg-wrapper svg text{
         font-size: 14px;
     }
+    h3{
+        font-size: var(--font-size-med);
+    }
+
+    
    
 /*switch to images next to each other with margin right*/
     
