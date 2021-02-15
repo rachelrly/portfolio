@@ -6,12 +6,49 @@
 }
 
 main {
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
+  line-height: calc(1.4 * 1rem);
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 1rem;
+}
+main section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+main section:first-of-type {
+  margin-top: 1.8rem;
+}
+main section:last-of-type {
+  margin-bottom: 1.4rem;
 }
 
 .project-img {
   max-width: 300px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-container .rachel-subtitle {
+  color: #1A237E;
+  font-weight: background-color;
+}
+.about-container p {
+  padding-bottom: 1rem;
+}
+.about-container p:first-of-type {
+  margin-top: 7.8rem;
 }
 
 footer {
@@ -31,7 +68,8 @@ footer a {
 footer .footer-icon {
   fill: #7986CB;
 }
-footer a:focus .footer-icon {
+footer a:focus .footer-icon,
+footer a:hover .footer-icon {
   fill: #EEFF41;
 }
 
@@ -42,6 +80,33 @@ header {
   justify-content: center;
   aling-items: center;
   height: 100vh;
+  width: 100%;
+}
+header .svg-wrapper {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .svg-wrapper svg {
+  height: inherit;
+}
+header .svg-wrapper svg text {
+  font-size: 8px;
+}
+header .header-span {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-span span {
+  color: #7986CB;
+  font-size: 1rem;
 }
 
 svg text {
@@ -70,6 +135,10 @@ svg text {
 
 .color-six {
   fill: #00E5FF;
+}
+
+section a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

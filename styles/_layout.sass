@@ -1,16 +1,44 @@
-
-
 *
     padding: 0
     margin: 0
     box-sizing: border-box
 
 main
+    font-family: $font
     display: flex
     flex-direction: column
+    line-height: $line-height
+    section
+        display: flex
+        flex-direction: column
+        padding: $spacer-med $spacer-sm
+        h3
+            font-size: $font-size-med
+            margin-bottom: $spacer-sm
+    section:first-of-type
+        margin-top: $spacer-lg
+    section:last-of-type
+        margin-bottom: $spacer-med
 
 .project-img
     max-width: 300px
+
+
+
+.about-container 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    h1
+        font-size: $font-size-lg
+        margin-bottom: $spacer-sm
+    .rachel-subtitle
+        color: $accent-color-dark
+        font-weight: background-color
+    p
+        padding-bottom: $spacer-sm 
+    p:first-of-type
+        margin-top: $button-width
 
 
 footer
@@ -26,5 +54,6 @@ footer
         outline: 0
     .footer-icon
         fill: $accent-color
-    a:focus .footer-icon
+    a:focus .footer-icon,
+    a:hover .footer-icon
         fill: $accent-color-extreme
