@@ -86,13 +86,13 @@ footer {
   padding: 0 1rem;
 }
 footer p {
-  color: #7986CB;
+  color: #ddbee4;
 }
 footer a {
   outline: 0;
 }
 footer .footer-icon {
-  fill: #7986CB;
+  fill: #ddbee4;
 }
 footer a:focus .footer-icon,
 footer a:hover .footer-icon {
@@ -163,7 +163,7 @@ header .header-span {
   align-items: center;
 }
 header .header-span span {
-  color: #7986CB;
+  color: #ddbee4;
   font-size: 1rem;
 }
 
@@ -200,11 +200,11 @@ section .link-wrapper {
   flex-wrap: wrap;
   width: inherit;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 section .link-wrapper .link-item-wrapper {
   width: 7.8rem;
-  background-color: #7986CB;
+  background-color: #1A237E;
   padding: 0.4rem;
   border-radius: 2px;
   display: flex;
@@ -212,9 +212,13 @@ section .link-wrapper .link-item-wrapper {
   justify-content: center;
   margin-bottom: 1rem;
 }
-section .link-wrapper .a:focus,
-section .link-wrapper .a:hover {
+section .link-wrapper .link-item-wrapper a:focus,
+section .link-wrapper .link-item-wrapper a:hover {
+  font-weight: bold;
   color: #EEFF41;
+}
+section .link-wrapper .button {
+  color: #ddbee4;
 }
 section a {
   text-decoration: none;
@@ -246,6 +250,7 @@ section .img-flex-wrapper {
   section .img-flex-wrapper {
     flex-direction: row;
     justify-content: space-evenly;
+    margin-bottom: 1rem;
   }
 }
 
