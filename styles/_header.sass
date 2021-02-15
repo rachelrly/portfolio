@@ -1,0 +1,70 @@
+
+
+header
+    background-color: $accent-color-dark
+    display: flex
+    flex-direction: column
+    justify-content: center
+    aling-items: center
+    height: 100vh
+    width: 100%
+    .svg-wrapper
+        width: 100%
+        height: inherit
+        display: flex
+        justify-content: center
+        align-items: center
+        svg
+            
+            margin-left: $spacer-tiny
+            height: inherit
+            @media all and (min-width: 500px)
+                height: 90%
+                width: 70%
+            @media all and (min-width: 800px)
+                width: 40%
+        svg text
+            font-size: 8px
+            @media screen and (min-width: 350px)
+                font-size: 10px
+            @media screen and (min-width: 410px)
+                font-size: 11px
+            @media screen and (min-width: 500px)
+                font-size: 12px
+            @media screen and (min-width: 700px)
+                font-size: $font-size-sm
+
+        
+    .header-span
+        position: absolute
+        bottom: 1rem
+        width: 100%
+        color: red
+        display: flex
+        justify-content: center
+        align-items: center
+        span
+            color: $accent-color
+            font-size: $font-size-sm
+
+svg text
+    fill: $accent-color-extreme
+
+.color-one
+    fill: #60bfde
+
+.color-two
+    fill: $accent-color-extreme
+
+.color-three
+    fill: #ddbee4
+
+.color-four
+    fill: #F06292
+
+.color-five
+    fill:#9fa8da
+
+.color-six
+    fill: #00E5FF
+

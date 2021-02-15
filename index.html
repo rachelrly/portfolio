@@ -9,7 +9,7 @@
     <meta property="og:image" content="./images/screenshot.jpg">
     <meta property="twitter:image" content="./images/screenshot.jpg">
 
-    <link rel='stylesheet' href='./main.css'/>
+    <link rel='stylesheet' href='./styles/style.css'/>
     <link rel="icon" 
       type="image/svg" 
       href="/images/favicon.png">
@@ -124,14 +124,17 @@
                 </g>
                </svg>
         </div>
-        <span class="header-scroll">Scroll down</span>
+        <span class="header-span"><span>Scroll down</span></span>
     </header>
     <section class="scroll-snap-container about-container" >
+     
         <h1>Rachel Reilly</h1>
         <span class='rachel-subtitle'>Software Engineer</span>
-            <div class="about-flex-wrapper">
+        <div class='image-p-about-wrapper'>
+    <img class='rachel-img' src='./images/rachel.jpg' />
+        <div class="about-flex-wrapper">
                 <p>
-                    I'm Rachel, a Fullstack Software Engineer from Chicago. A lifelong creator, my 
+                    I'm Rachel, a Software Engineer from Chicago and lifelong creator. My 
                     background as a visual artist and writer taught me how to <em>make</em> in a way that transcends disciplines. 
                     My creative work taught me to find solutions to my own problems by dissecting the work of others and adapting their solutions,
                     as well as the importance of structure as a driving force in creation. 
@@ -146,6 +149,7 @@
                     Scroll down to view my recent projects. Read my <a class="about-link" href='https://rachanastasia.medium.com/'>Medium posts</a>. Download my resume <a class='about-link' href='RachelReillyResume.docx'>here</a>.
                 </p>
             </div>
+        </div>
     </section>
 
 
@@ -154,9 +158,13 @@
             <h3>Sliced</h3>
             <div class="icon-wrapper">
                 <span class="tech-type">React</span>
+                <span>◇</span>
                 <span class="tech-type">Node</span>
+                <span>◇</span>
                 <span class="tech-type">Express</span>
+                <span>◇</span>
                 <span class="tech-type">CSS3</span>
+                <span>◇</span>
                 <span class="tech-type">PostgreSQL</span>
             </div>
         </div>
@@ -167,10 +175,18 @@
                     <img class="project-img" src='./images/sliced-recipe-list.jpg' alt='The saved recipe feature of Sliced, a recipe app'/>
                 </div>
                 <div class="link-wrapper">
-                    <a class='button' href='https://sliced.rachanastasia.vercel.app/'>View App</a>
-                    <a class='button' href='https://github.com/Rachanastasia/sliced-client'>Client Code</a>
-                    <a class='button' href='https://github.com/Rachanastasia/sliced-api'>Server Code</a>
-                    <a class="button" href='https://rachanastasia.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b'>Blog Post</a>
+                    <div class="link-item-wrapper">
+                        <a class='button' href='https://sliced.rachanastasia.vercel.app/'>View App</a>
+                    </div>
+                    <div class="link-item-wrapper">
+                        <a class='button' href='https://github.com/Rachanastasia/sliced-client'>Client Code</a>
+                    </div>
+                    <div class='link-item-wrapper'>
+                        <a class='button' href='https://github.com/Rachanastasia/sliced-api'>Server Code</a>
+                    </div>
+                    <div class='link-item-wrapper'>
+                        <a class="button" href='https://rachanastasia.medium.com/a-tale-of-three-string-parsing-algorithms-ed62a13bc62b'>Blog Post</a>
+                    </div>
                 </div>
             </div>
     </section>
@@ -180,9 +196,13 @@
             <h3>Spaced Repetition</h3>
             <div class="icon-wrapper">
                 <span class="tech-type">React</span>
+                <span>◇</span>
                 <span class="tech-type">Node</span>
+                <span>◇</span>
                 <span class="tech-type">Express</span>
+                <span>◇</span>
                 <span class="tech-type">CSS3</span>
+                <span>◇</span>
                 <span class="tech-type">PostgreSQL</span>
             </div>
         </div>
@@ -194,9 +214,15 @@
             <img class="project-img" src='./images/spaced-rep-word.jpg' alt='The quiz feature of Spaced Repetition, a langauge learning app'/>
             <img class="project-img" src='./images/spaced-rep-list.jpg' alt='The quiz feature of Spaced Repetition, a langauge learning app'/>
             </div><div class="link-wrapper">
+                <div class="link-item-wrapper">
                 <a class='button' href='https://spaced-repetition-dun.vercel.app/' >Live App</a>
+            </div>
+            <div class="link-item-wrapper">
                 <a class='button' href='https://github.com/Rachanastasia/spaced-repetition-client'>Client Code</a>
+            </div>
+            <div class="link-item-wrapper">
                 <a class='button' href='https://github.com/Rachanastasia/spaced-repetition-server'>Server Code</a>
+            </div>
             </div>
         </div>
     </section>
@@ -207,10 +233,15 @@
             <h3>GraphQL Bookshelf</h3>
             <div class="icon-wrapper">
                 <span class="tech-type">React</span>
+                <span>◇</span>
                 <span class="tech-type">Apollo</span>
+                <span>◇</span>
                 <span class="tech-type">CSS3</span>
+                <span>◇</span>
                 <span class="tech-type">GraphQL</span>
+                <span>◇</span>
                 <span class="tech-type">Node</span>
+                <span>◇</span>
                 <span class="tech-type">Express</span>
             </div>
         </div>
@@ -223,10 +254,15 @@
             <img class="project-img" src='./images/bookshelf-menu-options.jpg' alt='The menu options for sorting in the digital bookshelf'/>
             </div>
             <div class="link-wrapper">
+                <div class="link-item-wrapper">
                 <a class='button' href='https://bookshelf-orcin.vercel.app/'>Live App</a>
-                <a class='button' href='https://github.com/Rachanastasia/graphql-bookshelf-client'>Client Code</a>
-                <a class='button' href='https://github.com/Rachanastasia/graphql-bookshelf-api'>Server Code</a>
             </div>
+            <div class="link-item-wrapper">
+                <a class='button' href='https://github.com/Rachanastasia/graphql-bookshelf-client'>Client Code</a>
+               </div> 
+               <div class="link-item-wrapper">
+               <a class='button' href='https://github.com/Rachanastasia/graphql-bookshelf-api'>Server Code</a>
+            </div></div>
         </div>
     </section>
 
@@ -237,6 +273,7 @@
             <h3>One Dimensional Chess</h3>
             <div class="icon-wrapper icon-wrapper-center">
                 <span class="tech-type">React</span>
+                <span>◇</span>
                 <span class="tech-type">CSS3</span>
             </div>
         </div>
@@ -248,8 +285,11 @@
             <img class="project-img" src='./images/1d-chess-playing.jpg' alt='An in-progress game of One Dimensional Chess'/>
         </div>
             <div class="link-wrapper">
+                <div class="link-item-wrapper">
                 <a class='button' href='https://one-d-chess.vercel.app/' >Live App</a>
-                <a class='button' href='https://github.com/Rachanastasia/one-dimensional-chess'>Game Code</a>
+            </div>
+            <div class="link-item-wrapper">
+                <a class='button' href='https://github.com/Rachanastasia/one-dimensional-chess'>Game Code</a></div>
             </div>
         </div>
     </section>
@@ -259,21 +299,25 @@
             <h3>Loan Calculator</h3>
             <div class="icon-wrapper icon-wrapper-center">
                 <span class="tech-type">React</span>
+                <span>◇</span>
                 <span class="tech-type">CSS3</span>
             </div>
         </div>
-        <p>A loan calculator that uses a reducer for state management.
-        </p>
+        <p>A loan calculator that uses a reducer for state management.</p>
         <div class="project-img-wrapper">
             <div class="img-flex-wrapper">
             <img class="project-img" src='./images/loan-calc-months.jpg' alt='The starting board of One Dimensional Chess'/>
             <img class="project-img" src='./images/loan-calc-years.jpg' alt='An in-progress game of One Dimensional Chess'/>
         </div>
             <div class="link-wrapper">
-                <a class='button' href='https://loan-calculator-two.vercel.app/' >Live App</a>
-                <a class='button' href='https://github.com/Rachanastasia/loan-calculator'>Game Code</a>
+                <div class="link-item-wrapper">
+                <a class='button' href='https://loan-calculator-two.vercel.app/' >Live App</a></div>
+                <div class="link-item-wrapper">
+                <a class='button' href='https://github.com/Rachanastasia/loan-calculator'>Client Code</a></div>
+                <div class="link-item-wrapper">
                 <a class='button' href='https://rachanastasia.medium.com/usestate-vs-usereducer-9bbfca768f51' >Blog Post</a>
             </div>
+       
         </div>
     </section>
 
@@ -282,9 +326,13 @@
             <h3>Init</h3>
             <div class="icon-wrapper">
                 <span class="tech-type">React</span>
+                <span>◇</span>
                 <span class="tech-type">Node</span>
+                <span>◇</span>
                 <span class="tech-type">Express</span>
+                <span>◇</span>
                 <span class="tech-type">CSS3</span>
+                <span>◇</span>
                 <span class="tech-type">PostgreSQL</span>
             </div>
         </div>
@@ -298,9 +346,13 @@
             <img class="project-img" src='./images/init-upload.jpg' alt='The upload feature of Init, a social media app'/>
             </div>
             <div class="link-wrapper">
-                <a class="button" href='https://init-rachel.vercel.app/'>Live App</a>
-                <a class="button" href='https://github.com/Rachanastasia/init'>Client Code</a>
+                <div class="link-item-wrapper">
+                <a class="button" href='https://init-rachel.vercel.app/'>Live App</a></div>
+                <div class="link-item-wrapper">
+                <a class="button" href='https://github.com/Rachanastasia/init'>Client Code</a></div>
+                <div class="link-item-wrapper">
                 <a class="button" href='https://github.com/Rachanastasia/init-api'>Server Code</a>
+            </div>
             </div>
         </div>
     

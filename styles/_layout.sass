@@ -1,0 +1,79 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+main
+    background-color: #e9ebf3
+    font-family: $font
+    display: flex
+    flex-direction: column
+    line-height: $line-height
+    section
+        width: 100%
+        max-width: 900px
+        align-self: center
+        display: flex
+        flex-direction: column
+        padding: $spacer-med $spacer-sm
+        p, span
+            font-size: $font-size-sm
+        h3
+            font-size: $font-size-med
+            margin-bottom: $spacer-sm
+    section:first-of-type
+        margin-top: $spacer-lg
+    section:last-of-type
+        margin-bottom: $spacer-med
+
+.project-img
+    max-width: 300px
+
+.about-container 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    h1
+        font-size: $font-size-lg
+        margin-bottom: $spacer-sm
+    .rachel-subtitle
+        color: $accent-color-dark
+        font-weight: background-color
+    p:first-of-type
+        margin-top: $spacer-lg
+    img
+        max-width: 300px
+        align-self: center
+        margin-top: $spacer-sm
+    .image-p-about-wrapper
+        display: flex
+        flex-direction: column
+        @media screen and (min-width: 700px)
+            flex-direction: row
+            align-items: flex-start
+            img
+                margin-right: $spacer-sm
+                align-self: flex-start
+            p:first-of-type
+                margin-top: 0
+
+
+footer
+    display: flex
+    height: 50px
+    background-color: $accent-color-dark
+    justify-content: space-between
+    align-items: center
+    padding: 0 $spacer-sm
+    p
+        color: $accent-color
+    a
+        outline: 0
+    .footer-icon
+        fill: $accent-color
+    a:focus .footer-icon,
+    a:hover .footer-icon
+        fill: $accent-color-extreme
+
+ 
+ 
