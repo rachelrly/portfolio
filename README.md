@@ -2,6 +2,11 @@
 
 This is the repository for Rachel Reilly's portfolio site.
 
+## Tech Stack
+
+- HTML5
+- SASS
+
 ## Projects
 
 ### Sliced
