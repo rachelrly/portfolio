@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-img {
+  max-width: 300px;
+}
+
+footer {
+  display: flex;
+  height: 50px;
+  background-color: #1A237E;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+footer p {
+  color: #7986CB;
+}
+footer a {
+  outline: 0;
+}
+footer .footer-icon {
+  fill: #7986CB;
+}
+footer a:focus .footer-icon {
+  fill: #EEFF41;
+}
+
+header {
+  background-color: #1A237E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  aling-items: center;
+  height: 100vh;
+}
+
+svg text {
+  fill: #EEFF41;
+}
+
+.color-one {
+  fill: #60bfde;
+}
+
+.color-two {
+  fill: #EEFF41;
+}
+
+.color-three {
+  fill: #ddbee4;
+}
+
+.color-four {
+  fill: #F06292;
+}
+
+.color-five {
+  fill: #9fa8da;
+}
+
+.color-six {
+  fill: #00E5FF;
+}
+
+/*# sourceMappingURL=style.css.map */
