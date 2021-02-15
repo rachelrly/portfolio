@@ -10,6 +10,7 @@ main
     flex-direction: column
     line-height: $line-height
     section
+        width: 100%
         max-width: 900px
         align-self: center
         display: flex
@@ -43,6 +44,18 @@ main
     img
         max-width: 300px
         align-self: center
+        margin-top: $spacer-sm
+    .image-p-about-wrapper
+        display: flex
+        flex-direction: column
+        @media screen and (min-width: 700px)
+            flex-direction: row
+            align-items: flex-start
+            img
+                margin-right: $spacer-sm
+                align-self: flex-start
+            p:first-of-type
+                margin-top: 0
 
 
 footer
@@ -61,3 +74,6 @@ footer
     a:focus .footer-icon,
     a:hover .footer-icon
         fill: $accent-color-extreme
+
+ 
+ 

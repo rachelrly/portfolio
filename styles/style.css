@@ -13,6 +13,7 @@ main {
   line-height: calc(1.4 * 1rem);
 }
 main section {
+  width: 100%;
   max-width: 900px;
   align-self: center;
   display: flex;
@@ -56,6 +57,24 @@ main section:last-of-type {
 .about-container img {
   max-width: 300px;
   align-self: center;
+  margin-top: 1rem;
+}
+.about-container .image-p-about-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 700px) {
+  .about-container .image-p-about-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .about-container .image-p-about-wrapper img {
+    margin-right: 1rem;
+    align-self: flex-start;
+  }
+  .about-container .image-p-about-wrapper p:first-of-type {
+    margin-top: 0;
+  }
 }
 
 footer {
@@ -100,8 +119,39 @@ header .svg-wrapper svg {
   margin-left: 0.4rem;
   height: inherit;
 }
+@media all and (min-width: 500px) {
+  header .svg-wrapper svg {
+    height: 90%;
+    width: 70%;
+  }
+}
+@media all and (min-width: 800px) {
+  header .svg-wrapper svg {
+    width: 40%;
+  }
+}
 header .svg-wrapper svg text {
   font-size: 8px;
+}
+@media screen and (min-width: 350px) {
+  header .svg-wrapper svg text {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 410px) {
+  header .svg-wrapper svg text {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 500px) {
+  header .svg-wrapper svg text {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 700px) {
+  header .svg-wrapper svg text {
+    font-size: 1rem;
+  }
 }
 header .header-span {
   position: absolute;
@@ -152,22 +202,25 @@ section .link-wrapper {
   height: 100%;
   justify-content: space-between;
 }
-section .button {
-  width: 140px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1;
-  padding: 1rem;
-  color: #1A237E;
+section .link-wrapper .link-item-wrapper {
+  width: 7.8rem;
   background-color: #7986CB;
+  padding: 0.4rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+section .link-wrapper .a:focus,
+section .link-wrapper .a:hover {
+  color: #EEFF41;
 }
 section a {
   text-decoration: none;
-}
-section a span {
-  width: 80px;
   font-size: 1rem;
+  color: #1A237E;
+  outline: 0;
 }
 section .tech-type {
   color: #1A237E;
@@ -178,6 +231,22 @@ section .title-icon-wrapper {
 }
 section p {
   padding-bottom: 1rem;
+}
+section .project-img {
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 1rem;
+}
+section .img-flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 600px) {
+  section .img-flex-wrapper {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

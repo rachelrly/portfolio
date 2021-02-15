@@ -5,21 +5,24 @@ section
         width: inherit
         height: 100%
         justify-content: space-between
-
-    .button 
-        width: 140px
-        display: flex
-        justify-content: space-between
-        align-items: center
-        flex: 1
-        padding: $spacer-sm
-        color: $accent-color-dark
-        background-color: $accent-color
-    a
+        .link-item-wrapper
+            width: $button-width
+            background-color: $accent-color
+            padding: $spacer-tiny
+            border-radius: 2px
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-bottom: $spacer-sm
+        .a:focus,
+        .a:hover
+            color: $accent-color-extreme
+    
+    a 
         text-decoration: none
-        span
-            width: 80px
-            font-size: $font-size-sm
+        font-size: $font-size-sm
+        color: $accent-color-dark
+        outline: 0
     .tech-type
         color: $accent-color-dark
         font-weight: bold
@@ -27,3 +30,15 @@ section
         margin-bottom: $spacer-sm
     p
         padding-bottom: $spacer-sm
+    .project-img
+        width: 100%
+        max-width: 250px
+        margin-bottom: $spacer-sm
+    .img-flex-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        @media screen and (min-width: 600px)
+            flex-direction: row
+            justify-content: space-evenly
+    
