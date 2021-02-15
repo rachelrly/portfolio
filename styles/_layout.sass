@@ -4,14 +4,19 @@
     box-sizing: border-box
 
 main
+    background-color: #e9ebf3
     font-family: $font
     display: flex
     flex-direction: column
     line-height: $line-height
     section
+        max-width: 900px
+        align-self: center
         display: flex
         flex-direction: column
         padding: $spacer-med $spacer-sm
+        p, span
+            font-size: $font-size-sm
         h3
             font-size: $font-size-med
             margin-bottom: $spacer-sm
@@ -23,8 +28,6 @@ main
 .project-img
     max-width: 300px
 
-
-
 .about-container 
     display: flex
     flex-direction: column
@@ -35,10 +38,11 @@ main
     .rachel-subtitle
         color: $accent-color-dark
         font-weight: background-color
-    p
-        padding-bottom: $spacer-sm 
     p:first-of-type
-        margin-top: $button-width
+        margin-top: $spacer-lg
+    img
+        max-width: 300px
+        align-self: center
 
 
 footer

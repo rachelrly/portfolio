@@ -6,15 +6,21 @@
 }
 
 main {
+  background-color: #e9ebf3;
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   line-height: calc(1.4 * 1rem);
 }
 main section {
+  max-width: 900px;
+  align-self: center;
   display: flex;
   flex-direction: column;
   padding: 1.4rem 1rem;
+}
+main section p, main section span {
+  font-size: 1rem;
 }
 main section h3 {
   font-size: 1.4rem;
@@ -44,11 +50,12 @@ main section:last-of-type {
   color: #1A237E;
   font-weight: background-color;
 }
-.about-container p {
-  padding-bottom: 1rem;
-}
 .about-container p:first-of-type {
-  margin-top: 7.8rem;
+  margin-top: 1.8rem;
+}
+.about-container img {
+  max-width: 300px;
+  align-self: center;
 }
 
 footer {
@@ -90,6 +97,7 @@ header .svg-wrapper {
   align-items: center;
 }
 header .svg-wrapper svg {
+  margin-left: 0.4rem;
   height: inherit;
 }
 header .svg-wrapper svg text {
@@ -137,8 +145,39 @@ svg text {
   fill: #00E5FF;
 }
 
+section .link-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: inherit;
+  height: 100%;
+  justify-content: space-between;
+}
+section .button {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 1rem;
+  color: #1A237E;
+  background-color: #7986CB;
+}
 section a {
   text-decoration: none;
+}
+section a span {
+  width: 80px;
+  font-size: 1rem;
+}
+section .tech-type {
+  color: #1A237E;
+  font-weight: bold;
+}
+section .title-icon-wrapper {
+  margin-bottom: 1rem;
+}
+section p {
+  padding-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
