@@ -12,13 +12,21 @@ main {
   flex-direction: column;
   line-height: calc(1.4 * 1rem);
 }
+@media all and (min-width: 950px) {
+  main {
+    background-color: #eff0f7e7;
+  }
+}
 main section {
   width: 100%;
   max-width: 900px;
   align-self: center;
+  background-color: #e9ebf3;
   display: flex;
+  border-radius: 4px;
   flex-direction: column;
   padding: 1.4rem 1rem;
+  margin-bottom: 1.4rem;
 }
 main section p, main section span {
   font-size: 1rem;
@@ -117,7 +125,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  aling-items: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
 }
@@ -176,7 +184,7 @@ header .header-span {
   align-items: center;
 }
 header .header-span span {
-  color: #e9ebf3;
+  color: #9fa8da;
   font-size: 1rem;
 }
 
@@ -244,6 +252,12 @@ section .tech-type {
 }
 section .title-icon-wrapper {
   margin-bottom: 1rem;
+}
+@media all and (min-width: 700px) {
+  section .title-icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 section p {
   padding-bottom: 1rem;

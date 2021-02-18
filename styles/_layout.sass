@@ -4,7 +4,9 @@
     box-sizing: border-box
 
 main
-    background-color: $accent-color
+    background-color:$accent-color
+    @media all and (min-width: 950px)
+        background-color: #eff0f7e7
     font-family: $font
     display: flex
     flex-direction: column
@@ -13,9 +15,12 @@ main
         width: 100%
         max-width: 900px
         align-self: center
+        background-color: $accent-color
         display: flex
+        border-radius: 4px
         flex-direction: column
         padding: $spacer-med $spacer-sm
+        margin-bottom: $spacer-med
         p, span
             font-size: $font-size-sm
         h3
