@@ -30,9 +30,14 @@ main section {
 }
 @media all and (min-width: 900px) {
   main section {
-    max-width: 70vw;
+    max-width: 80vw;
     padding: 5rem;
     margin-top: 5rem;
+  }
+}
+@media all and (min-width: 1100px) {
+  main section {
+    max-width: 75vw;
   }
 }
 main section p, main section span {
@@ -52,8 +57,8 @@ main section:last-of-type {
 }
 main .first-project {
   margin-top: 1.8rem;
+  margin-top: 5rem;
 }
-
 .project-img {
   max-width: 300px;
 }
@@ -286,6 +291,11 @@ section .img-flex-wrapper {
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  section .subtitle {
+    text-align: center;
   }
 }
 

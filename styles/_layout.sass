@@ -22,9 +22,11 @@ main
         padding: $spacer-med $spacer-sm
         margin-top: $spacer-med
         @media all and (min-width: 900px)
-            max-width: 70vw
+            max-width: 80vw
             padding: 5rem
             margin-top: 5rem
+        @media all and (min-width: 1100px)
+            max-width: 75vw
         p, span
             font-size: $font-size-sm
         h3
@@ -36,6 +38,8 @@ main
             margin-bottom: 5rem
     .first-project
         margin-top: $spacer-lg
+        @media all and (min-width: 900px)
+        margin-top: 5rem
 
 .project-img
     max-width: 300px
