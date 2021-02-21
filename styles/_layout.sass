@@ -20,16 +20,20 @@ main
         border-radius: 4px
         flex-direction: column
         padding: $spacer-med $spacer-sm
-        margin-bottom: $spacer-med
+        margin-top: $spacer-med
+        @media all and (min-width: 900px)
+            max-width: 70vw
+            padding: 5rem
+            margin-top: 5rem
         p, span
             font-size: $font-size-sm
         h3
             font-size: $font-size-med
             margin-bottom: $spacer-sm
-    section:first-of-type
-        margin-top: $spacer-lg
     section:last-of-type
         margin-bottom: $spacer-med
+        @media all and (min-width: 900px)
+            margin-bottom: 5rem
     .first-project
         margin-top: $spacer-lg
 

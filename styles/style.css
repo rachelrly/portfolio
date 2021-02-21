@@ -26,7 +26,14 @@ main section {
   border-radius: 4px;
   flex-direction: column;
   padding: 1.4rem 1rem;
-  margin-bottom: 1.4rem;
+  margin-top: 1.4rem;
+}
+@media all and (min-width: 900px) {
+  main section {
+    max-width: 70vw;
+    padding: 5rem;
+    margin-top: 5rem;
+  }
 }
 main section p, main section span {
   font-size: 1rem;
@@ -35,11 +42,13 @@ main section h3 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
 }
-main section:first-of-type {
-  margin-top: 1.8rem;
-}
 main section:last-of-type {
   margin-bottom: 1.4rem;
+}
+@media all and (min-width: 900px) {
+  main section:last-of-type {
+    margin-bottom: 5rem;
+  }
 }
 main .first-project {
   margin-top: 1.8rem;
